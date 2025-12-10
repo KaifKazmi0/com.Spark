@@ -1,4 +1,4 @@
-package Multithreading.Extend;
+package Multithreading.Extend.ThreadBasicMethods;
 
 class JoinDemo extends Thread{
     @Override

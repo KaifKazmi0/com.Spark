@@ -1,4 +1,4 @@
-package Multithreading;
+package Multithreading.Extend;
 
 public class Deadlock {
     static class A {}

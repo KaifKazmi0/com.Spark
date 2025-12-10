@@ -1,4 +1,4 @@
-package Multithreading.Extend;
+package Multithreading.Extend.ThreadBasicMethods;
 
 class Threadx extends Thread{
     private String name;

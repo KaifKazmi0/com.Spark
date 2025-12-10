@@ -1,4 +1,4 @@
-package Multithreading;
+package Multithreading.Extend;
 
 public class Multithreading extends Thread{
     private int threadNumber;

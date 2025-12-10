@@ -1,0 +1,3 @@
+| Worst              | Bad                | Better               | Best                                     |
+| ------------------ | ------------------ | -------------------- | ---------------------------------------- |
+| `throws Throwable` | `throws Exception` | `throws IOException` | `throws specific, meaningful exceptions` |
