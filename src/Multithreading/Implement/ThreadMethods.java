@@ -1,4 +1,4 @@
-package Multithreading.Impement;
+package Multithreading.Implement;
 //run
 //start
 //getName

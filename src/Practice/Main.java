@@ -3,9 +3,9 @@ package Practice;
 class Addition{
     int sum = 0;
     void add(){
-        synchronized (this){
-            sum = sum +1;
-        }
+            synchronized (this){
+                sum = sum +1;
+            }
     }
 }
 
