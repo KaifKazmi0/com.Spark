@@ -15,5 +15,15 @@ public class MyBufferedReader {
         }catch (IOException e){
             System.out.println(e.getMessage());
         }
+
+        try {
+            BufferedReader bs = new BufferedReader(new FileReader("Hello.txt"));
+            System.out.println("File data :");
+            while (bs.ready()){
+                System.out.println(bs.readLine());
+            }
+        }catch (IOException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
