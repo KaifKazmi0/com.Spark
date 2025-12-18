@@ -2,7 +2,7 @@ package Multithreading.ThreadPool.MyCountDnLatch;
 
 import java.util.concurrent.*;
 
-public class Demo {
+public class  NeedOfCDLatch{
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(3);
        Future<?> future1 = executor.submit(new dependentService());
@@ -13,6 +13,9 @@ public class Demo {
         future1.get();
         future2.get();
         future3.get();
+
+        //if we want below line to run in last , we can use get but if there are n no. of futureN
+        //it'll be hectic to do future.get() for each manually , CountDownLatch solves this problem
         System.out.println("hello from -> "+Thread.currentThread().getName());
 
 

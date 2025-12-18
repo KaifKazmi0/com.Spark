@@ -1,6 +1,5 @@
-package Collection;
+package Collection.ArrayListDemo;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
