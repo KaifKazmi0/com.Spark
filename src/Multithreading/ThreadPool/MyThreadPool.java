@@ -10,7 +10,7 @@ public class MyThreadPool {
 
 
     public static void main(String[] args) {
-        long starttime = System.currentTimeMillis();
+        long starttime = System.currentTimeMillis();  //1 jan 1970 mili
 
 //        Thread[] thread = new Thread[10];
 
