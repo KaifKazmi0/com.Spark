@@ -1,28 +1,28 @@
 package TrainBookingSystem;
 
 public class Train {
+    private int trainId;
     private String trainName;
     private String source;
     private String destination;
-    private int totalSeat;
-    private int availableSeat;
-    private int trainId;
+    private int totalSeats;
+    private int availableSeats;
+
+
+    public Train(int trainId, String trainName, String source, String destination, int totalSeats) {
+        this.trainId = trainId;
+        this.trainName = trainName;
+        this.source = source;
+        this.destination = destination;
+        this.totalSeats = totalSeats;
+        this.availableSeats = totalSeats;
+    }
 
     public int getTrainId() {
         return trainId;
     }
 
     public void setTrainId(int trainId) {
-        this.trainId = trainId;
-    }
-
-    public Train(String trainName, String source, String destination,
-                 int totalSeat, int trainId) {
-        this.trainName = trainName;
-        this.source = source;
-        this.destination = destination;
-        this.totalSeat = totalSeat;
-        this.availableSeat = totalSeat;
         this.trainId = trainId;
     }
 
@@ -50,24 +50,44 @@ public class Train {
         this.destination = destination;
     }
 
-    public int getTotalSeat() {
-        return totalSeat;
+    public int getTotalSeats() {
+        return totalSeats;
     }
 
-    public void setTotalSeat(int totalSeat) {
-        this.totalSeat = totalSeat;
+    public void setTotalSeats(int totalSeats) {
+        this.totalSeats = totalSeats;
     }
 
-    public int getAvailableSeat() {
-        return availableSeat;
+    public int getAvailableSeats() {
+        return availableSeats;
     }
 
-    public void setAvailableSeat(int availableSeat) {
-        this.availableSeat = availableSeat;
+    public void setAvailableSeats(int availableSeats) {
+        this.availableSeats = availableSeats;
     }
+
+    public boolean bookSeats(int seats){
+        if (seats<=availableSeats){
+            availableSeats-=seats;
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public void cancelSeats(int seats){
+        if (seats+availableSeats>totalSeats){
+            availableSeats = totalSeats;
+            return;
+        }
+        availableSeats+=seats;
+    }
+
 
     @Override
     public String toString(){
-        return "Train Name and Id: "+trainName+" | "+trainId+" | Route: "+source+" -> "+destination+" Available Seats: "+availableSeat;
+        return trainId+" | "+trainName+" Route "+source+" -> "+destination+" | Available Seats: "+availableSeats;
     }
 }
+
+

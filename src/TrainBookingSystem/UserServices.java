@@ -3,19 +3,18 @@ package TrainBookingSystem;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserServices
-{
+public class UserServices {
     Map<String,User> usermap = new HashMap<>();
     User currentUser = null;
 
     public boolean registerUser( String fullname,String username,String password,String contact){
-        if (usermap.containsKey(username)){
-            System.out.println("user name already taken, try another");
-            return false;
-        }
-        User user = new User(fullname,username,password,contact);
-        usermap.put(username,user);
-        return true;
+       if (usermap.containsKey(username)){
+           System.out.println("user name already taken, try another");
+           return false;
+       }
+       User user = new User(fullname,username,password,contact);
+       usermap.put(username,user);
+       return true;
     }
 
     public boolean loginUser(String username,String password){
@@ -48,4 +47,6 @@ public class UserServices
         return currentUser != null;
     }
 
+
 }
+
