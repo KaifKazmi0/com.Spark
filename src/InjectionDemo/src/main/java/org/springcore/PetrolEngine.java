@@ -1,4 +1,4 @@
-package org.example.springcore;
+package InjectionDemo.src.main.java.org.springcore;
 
 public class PetrolEngine implements Engine{
 
